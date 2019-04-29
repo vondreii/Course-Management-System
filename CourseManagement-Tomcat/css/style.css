@@ -1,0 +1,242 @@
+/*------------------------------------------
+ * STYLE.CSS - CREATED ON 17TH OCT 2017
+ *
+------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Roboto');
+
+body {
+    background-color: #E7DACB;
+    font-family: 'Roboto';
+    background-image: url('../images/hip-square.png');
+    min-height: 100%;
+}
+
+.nuboard a { color: white; }
+a, .content h3 a { text-decoration: none; color: #3D718C;}
+h1 {
+    text-align: center;
+    font-family: 'Anton';
+    font-size: 50px;
+    color: white;
+}
+
+h2 { font-size: 30px; color: white; }
+.courses h2 { color: #3E4752; }
+
+nav, nav a { color: white;}
+nav a {  background-color: rgba(0,0,0,0.2); padding: 10px; border-radius: 5px; margin: 5px;}
+nav a:hover { background-color: rgba(255,255,255,0.6); color: #3D718C; }
+
+li { list-style-type: none; }
+
+span.newWord { color: #4A89AA; } /* styling for the word NEW */
+span.teamName { color: #BE4248; }
+
+header { background-color: #3E4752; padding: 30px;}
+/*header.index {height: 100px;}*/
+/*header.index h1 { margin-top: 10px;}*/
+
+.loginBox, input[type=submit], .content .innercontent, .announcements li,
+.materials li, .forums li, .threads li, .threadReplies li, .menu li, .inner li
+{ border-radius: 5px; }
+
+.container {
+    background-color: #586473;
+    height: inherit;
+    width: 100%;
+    margin: 0 auto ;
+    margin-top: -10px;
+    padding-bottom: 100px;
+    /*position:absolute;*/
+    top:0; bottom:0; left:0; right:0;
+    overflow:hidden;
+}
+
+/* LOGIN PAGE */
+.loginBox label { margin-left: 30px; }
+.loginBox, .loginBox button { margin: 0 auto; }
+.loginBox input, .loginBox button { display: block; }
+.loginBox{
+    text-transform: uppercase;
+    background: #E7DACB;
+    width: 400px;
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.loginBox input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 300px;
+    display: block;
+    margin: 10px auto;
+}
+
+input[type=submit] { padding: 10px 20px; margin-top: 20px;}
+
+/* MAIN PAGE */
+.courses, .course, .courseContents { padding: 10px;}
+.courses, .course {
+    margin: 30px 10px 50px 50px;
+    /*width: 300px;*/
+
+    background-color: #E7DACB;
+    border-radius: 3px;
+    float: left;
+}
+
+/*.courses h2 {border-bottom: 1px solid black;}*/
+.courseContents {
+    width: 600px;
+    float: right;
+    background-color: #d8d8d8;
+    /*margin: 30px 50px;*/
+}
+
+.course li {
+    background-color: grey;
+    padding: 15px;
+    width: 290px;
+    margin-left: -50px;
+    margin-bottom: 1px;
+}
+
+.content {
+  padding: 10px 100px;
+}
+
+/* Form Styling */
+
+#first{
+    width:inherit;
+    height:610px;
+    box-shadow:0 0 0 1px rgba(14,41,57,0.12),0 2px 5px rgba(14,41,57,0.44),inset 0 -1px 2px rgba(14,41,57,0.15);
+    padding:10px 50px 0;
+    background:linear-gradient(#fff,#f2f6f9);
+    border-radius:5px;
+}
+
+hr{
+    border:0;
+    border-top:1px solid #ccc;
+    margin-bottom:30px;
+    border: solid #3E4752 1px;
+}
+label{
+    font-size:17px
+}
+input{
+    width:380px;
+    padding:10px;
+    margin-top:10px;
+    margin-bottom:35px;
+    border-radius:5px;
+    border:1px solid #cbcbcb;
+    box-shadow:inset 0 1px 2px rgba(0,0,0,0.18);
+    font-size:16px
+}
+textarea{
+    width:80%;
+    height:100px;
+    padding:10px;
+    margin-top:10px;
+    margin-bottom:35px;
+    border-radius:5px;
+    border:1px solid #cbcbcb;
+    box-shadow:inset 0 1px 2px rgba(0,0,0,0.18);
+    font-size:16px
+}
+input[type=submit]{
+    background:linear-gradient(to bottom,#22abe9 5%,#36caf0 100%);
+    box-shadow:inset 0 1px 0 0 #7bdcf4;
+    border:1px solid #0F799E;
+    color:#fff;
+    font-size:19px;
+    font-weight:700;
+    cursor:pointer;
+    text-shadow:0 1px 0 #13506D
+}
+input[type=submit]:hover{
+    background:linear-gradient(to bottom,#36caf0 5%,#22abe9 100%)
+}
+
+/* Announcements */
+.content.innercontent, .announcements, .materials, .forums, .threads, .threadReplies, .menu, .inner
+{ background-color: rgba(255,255,255,0.2); padding: 30px; margin-left: 0; }
+.announcements h3 { color: black; margin-top: 0px;}
+.announcements li, .materials li, .forums li, .threads li, .threadReplies li, .menu li, .inner li {
+    /*background-color: #E7DACB;*/
+    /*background-color: rgba(21,36,48,0.4);*/
+    background-color: rgba(255,255,255,0.4);
+    margin-bottom: 5px;
+    padding: 15px;
+    /*color: white;*/
+    /*margin-left: -40px;*/
+}
+.materials h3, .forums h3, .threads h3, .inner h3 { font-size: 25px; margin-top: 0px;}
+.menu li { font-size: 18px; } .menu li:hover, .content h3:hover  {background-color: rgba(255,255,255,0.6);}
+
+.addButton {
+    background-color: #4A89AA;
+    /*width: 200px;*/
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: solid 0.5px #3A81AA;
+    color: white;
+}
+
+.addButton  a { color:white; }
+.flright { float: right; } .flleft {float: left; margin-left: 10px;} /*.flblock { padding: 200px;} Makes button a button but block*/
+
+.linkButtons { width: 300px; } .linkButtons a {display: block; margin-bottom: 20px;} /* any buttons on a page that are links */
+.dateArea { background-color: rgba(0,0,0,0.1); text-align: right; padding: 5px 200px; margin-top: 30px;}
+.logout { position: absolute; top: 20px; right: 20px; padding: 10px 20px; }
+.logout:hover { background-color: #BE4248; border: solid 0.5px #9C363B; }
+.login:hover { background-color: #3DAA8C; border: solid 0.5px #29735E; }
+
+.acceptButton, .rejectButton { font-size: 9px; display: inline; padding: 5px 20px; border-radius: 10px;
+                                font-weight: bold; text-transform: uppercase; color: black;}
+.acceptButton:hover, .rejectButton:hover { color: white; }
+.acceptButton { border: 1px solid #3BB56D; }
+.rejectButton { border: 1px solid #DF4248; }
+.acceptButton:hover { background-color: #3BB56D; }
+.rejectButton:hover { background-color: #DF4248; }
+
+.coordinator { color: #BE4248; }
+
+.content h3 { background-color: rgba(255,255,255,0.4); padding: 10px; border-radius: 3px;}
+
+/* Tables */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/* Navigation Links */
+nav ul.nav {
+    background-color: red;
+    /*height: 50px;*/
+}
+
+nav ul.nav li {
+    background-color: blue;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    height: 50px;
+    display: inline;
+}

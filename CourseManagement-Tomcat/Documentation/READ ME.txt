@@ -1,0 +1,43 @@
+
+ * Sharlene Von Drehnen - c3220929
+ * Sora Khan - c3197198
+ * Jeremiah Smith - c3238179
+ 
+ * SENG2050 Assignment 3
+
+** URL needed to start: localhost:8080/c3238179_c3220929_c3197198_FinalProject/NewBoard 
+
+-- Setting up the Database:
+
+-- Context.xml (META-INF > context.xml)
+
+	The database being used is c3220929_db. 
+	
+	The following setting should already configured in context.xml:
+	username = "c3220929"
+	password = "020296"
+	url = "jdbc:mysql://localhost:3306/SENG2050_2017" 
+
+	depending upon whether you are connected in uni or home, the 'url' attribute needs to be changed.
+	
+	url = "jdbc:mysql://localhost:3306/SENG2050_2017"  
+		- ( If accessing from uni)
+	
+	url = "jdbc:mysql://localhost:30001/SENG2050_2017"  
+		- ( If accessing from home - 30001 or whichever port chosen, because that is the port we are tunneling through )
+
+-- DatabaseFunctions.java (WEB-INF > classes > nuboardpkg > DatabaseFunction.java)
+
+	Check that:
+	MySQLURL = "jdbc:mysql://teachdb/c3220929_db"; ( If accessing from uni)
+    	MySQLURL = "jdbc:mysql://localhost:30001/c3220929_db"; // ( If accessing from home )
+
+
+-- User Management
+A tomcatusers.xml has been provided with the users and roles that our system uses for our user management. 
+Move this into the apache-tomcat-8.5.16/conf folder.
+
+DatabaseFunction.java is the main java file that connects to the database. The database configuration is already in the java files.
+
+The database c3220929 is already populated with data, but the sql data and tables have been provided.
+They are in the databases folder.

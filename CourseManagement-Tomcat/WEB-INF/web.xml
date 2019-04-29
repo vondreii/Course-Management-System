@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+	<session-config>
+		<session-timeout>
+			30
+		</session-timeout>
+	</session-config>
+
+	<!-- Mapping to StudentAssignmentServlet.java -->
+	<servlet>
+		<servlet-name>StudentAssignmentServlet</servlet-name>
+		<servlet-class>nuboardpkg.StudentAssignmentServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StudentAssignmentServlet</servlet-name>
+		<url-pattern>/c3238179_c3220929_c3197198_FinalProject/StudentAssignmentServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Mapping to AdverseRequestServlet.java -->
+	<servlet>
+		<servlet-name>AdverseRequestServlet</servlet-name>
+		<servlet-class>nuboardpkg.AdverseRequestServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AdverseRequestServlet</servlet-name>
+		<url-pattern>/c3238179_c3220929_c3197198_FinalProject/AdverseRequestServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Mapping to PeerEvaluationAndGroupServlet.java -->
+	<servlet>
+		<servlet-name>PeerEvaluationAndGroupServlet</servlet-name>
+		<servlet-class>nuboardpkg.PeerEvaluationAndGroupServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PeerEvaluationAndGroupServlet</servlet-name>
+		<url-pattern>/c3238179_c3220929_c3197198_FinalProject/PeerEvaluationAndGroupServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Mapping to DiscussionChatServlet.java -->
+	<servlet>
+		<servlet-name>DiscussionChatServlet</servlet-name>
+		<servlet-class>nuboardpkg.DiscussionChatServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DiscussionChatServlet</servlet-name>
+		<url-pattern>/c3238179_c3220929_c3197198_FinalProject/DiscussionChatServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Mapping to CourseMaterialsAndAnnouncementsServlet.java -->
+	<servlet>
+		<servlet-name>CourseMaterialsAndAnnouncementsServlet</servlet-name>
+		<servlet-class>nuboardpkg.CourseMaterialsAndAnnouncementsServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CourseMaterialsAndAnnouncementsServlet</servlet-name>
+		<url-pattern>/c3238179_c3220929_c3197198_FinalProject/CourseMaterialsAndAnnouncementsServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Mapping to TeacherAssignmentServlet.java -->
+	<servlet>
+		<servlet-name>TeacherAssignmentServlet</servlet-name>
+		<servlet-class>nuboardpkg.TeacherAssignmentServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TeacherAssignmentServlet</servlet-name>
+		<url-pattern>/c3238179_c3220929_c3197198_FinalProject/TeacherAssignmentServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Mapping to NewBoard.java -->
+	<servlet>
+		<servlet-name>NewBoard</servlet-name>
+		<servlet-class>nuboardpkg.NewBoard</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>NewBoard</servlet-name>
+		<url-pattern>/c3238179_c3220929_c3197198_FinalProject/NewBoard</url-pattern>
+	</servlet-mapping>
+
+	<!-- Mapping to NotificationServlet.java -->
+	<servlet>
+		<servlet-name>NotificationServlet</servlet-name>
+		<servlet-class>nuboardpkg.NotificationServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>NotificationServlet</servlet-name>
+		<url-pattern>/c3238179_c3220929_c3197198_FinalProject/NotificationServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Security roles -->
+	<!--
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Must be logged in</web-resource-name>
+		<url-pattern>/*</url-pattern>
+	</web-resource-collection>
+	<auth-constraint>
+		<role-name>student</role-name>
+		<role-name>staff</role-name>
+		<role-name>coordinator</role-name>
+	</auth-constraint>
+</security-constraint>
+-->
+
+<security-constraint>
+	<display-name>name</display-name>
+	<web-resource-collection>  
+		<web-resource-name>Restricted</web-resource-name>
+		<url-pattern>/*</url-pattern>
+		<http-method>GET</http-method>
+		<http-method>POST</http-method>
+	</web-resource-collection>
+	<auth-constraint>
+		<role-name>student</role-name>
+		<role-name>staff</role-name>
+		<role-name>coordinator</role-name>
+	</auth-constraint>
+	<user-data-constraint>
+		<transport-guarantee>NONE</transport-guarantee>
+	</user-data-constraint>
+</security-constraint>
+<security-constraint><!--Exclude css and images here -->
+	<web-resource-collection>
+		<web-resource-name>Exclude from Security</web-resource-name>
+		<url-pattern>/images/*</url-pattern><!-- No security for images -->
+		<url-pattern>/css/*</url-pattern><!-- No security for css -->
+	</web-resource-collection>
+</security-constraint>
+
+
+<!-- <login-config>
+	<auth-method>BASIC</auth-method>
+    </login-config> -->
+
+    <login-config>
+	    <auth-method>FORM</auth-method>
+	    <realm-name>Users</realm-name>
+	    <form-login-config>
+		    <form-login-page>/login.jsp</form-login-page>
+		    <form-error-page>/loginError.jsp</form-error-page>
+	    </form-login-config>
+    </login-config>
+
+    <!--
+	The below roles should match those defined in your user database
+	(tomcat-users.xml or an actual database)
+    -->
+    <security-role><role-name>student</role-name></security-role>
+    <security-role><role-name>staff</role-name></security-role>
+    <security-role><role-name>coordinator</role-name></security-role>
+
+</web-app>
