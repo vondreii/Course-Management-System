@@ -19,7 +19,7 @@ materials and forums. Staff can create and reply to threads in the a forum. Staf
 can do all of the abilities of a staff member with the added ability to view adverse requests. Late deductions are applied automatically. \
 \
 Pending features that intend to be added includes easier management of group submissions and automating the sorting of individual assignments
-into their own student folders while they are being downloaded. 
+into their own student folders while they are being downloaded. \
 \
 A full list of all new features of this system are documented in 'Features.pdf'
 
