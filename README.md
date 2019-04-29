@@ -5,8 +5,8 @@ NewBoard is an assignment submission and marking system designed with the purpos
 NewBoard attempts to achieve this by including existing features of Blackboard while making it easier for staff and students to 
 communicate with each other regarding assignment results, and by giving students a more comprehensive ability to track their grades 
 and view their progress towards their future academic goals. NewBoard is also designed with the purpose of making it easier for 
-staff to complete potentially mundane and repetitive tasks such as marking assignments so that they can get back to engaging with 
-the students as quickly as possible. Made with Java, jsp and SQL.
+staff to complete potentially mundane and repetitive tasks such as marking, calculating late submission grades and uploading assignments 
+so that they can get back to engaging with the students as quickly as possible. Made with Java, jsp and SQL.
 
 
 ## Features ##
