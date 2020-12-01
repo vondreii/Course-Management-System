@@ -1,4 +1,4 @@
-# Course Management System #
+# asp.net-course-management #
 
 ## Overview ##
 NewBoard is an assignment submission and marking system designed with the purpose of improving the existing ‘Blackboard’ system. 
